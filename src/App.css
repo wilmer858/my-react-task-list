@@ -1,0 +1,66 @@
+.Container {
+  display: grid;
+  grid-template-columns: 45%;
+  justify-content: center;
+}
+
+.form {
+  height: 25px;
+  display: grid;
+  grid-template-columns: 45% 45% 10%;
+}
+
+.form1,
+.form2 {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+button {
+  border: solid 1px gray;
+  border-radius: 3px;
+  background-color: aquamarine;
+}
+
+.task {
+  display: grid;
+  grid-template-columns: 5% 37.5% 37.5% 5% 5%;
+  align-items: center;
+  justify-items: center;
+  gap: 5px;
+  background-color: azure;
+  border: solid 0.5px cadetblue;
+  border-radius: 5px;
+}
+
+.checkbox {
+  grid-column: 1;
+  justify-self: center;
+}
+
+.span1 {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.span2 {
+  grid-column: 3;
+  justify-self: center;
+}
+
+.edit {
+  grid-column: 4;
+  line-height: 50%;
+  justify-self: center;
+  color: blue;
+  border: azure;
+  background-color: azure;
+}
+
+.delete {
+  grid-column: 5;
+  line-height: 50%;
+  color: red;
+  border: azure;
+  background-color: azure;
+}
