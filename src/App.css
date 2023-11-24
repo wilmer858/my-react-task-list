@@ -1,51 +1,81 @@
-.Container {
-  display: grid;
-  grid-template-columns: 45%;
+body {
+  background-color: black;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.Container {
+  background-color: beige;
+  width: 700px;
+  border: solid 1px black;
+  border-radius: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.containerTasklist {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 23px;
+}
+
+.Header {
+  font-size: 23px;
 }
 
 .form {
-  height: 25px;
   display: grid;
-  grid-template-columns: 45% 45% 10%;
+  grid-template-columns: 35% 55% 10%;
 }
 
 .form1,
 .form2 {
   display: grid;
   grid-template-columns: 100%;
+  padding-right: 5px;
+}
+
+.formInputAdd {
+  border: solid 1px;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 23px;
 }
 
 button {
+  height: 55px;
   border: solid 1px gray;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: aquamarine;
+  font-size: 28px;
 }
 
 .task {
+  height: 55px;
   display: grid;
-  grid-template-columns: 5% 37.5% 37.5% 5% 5%;
+  grid-template-columns: 5% 25% 59% 5% 6%;
   align-items: center;
-  justify-items: center;
-  gap: 5px;
   background-color: azure;
-  border: solid 0.5px cadetblue;
+  border: solid 1px cadetblue;
   border-radius: 5px;
+  margin-bottom: 5px;
 }
 
-.checkbox {
-  grid-column: 1;
-  justify-self: center;
+.completed {
+  text-decoration: line-through;
+  color: grey;
 }
 
 .span1 {
-  grid-column: 2;
-  justify-self: center;
+  padding-left: 5px;
 }
 
 .span2 {
-  grid-column: 3;
-  justify-self: center;
+  padding-left: 20px;
 }
 
 .edit {
@@ -61,6 +91,40 @@ button {
   grid-column: 5;
   line-height: 50%;
   color: red;
+  border: azure;
+  background-color: azure;
+}
+
+.formInput {
+  display: grid;
+  grid-template-columns: 30% 60% 10%;
+  align-items: center;
+  border: solid 1px cadetblue;
+  border-radius: 8px;
+  background-color: azure;
+  margin-bottom: 5px;
+}
+
+.inputEdit {
+  display: grid;
+  grid-template-columns: 100%;
+  border-radius: 8px;
+  font-size: 23px;
+  padding-left: 5px;
+}
+
+.editInput {
+  height: 35px;
+  border: solid 1px;
+  border-radius: 8px;
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+.editSave {
+  line-height: 50%;
+  justify-self: center;
+  color: blue;
   border: azure;
   background-color: azure;
 }

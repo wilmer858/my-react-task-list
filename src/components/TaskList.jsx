@@ -1,10 +1,18 @@
-import { Task } from "./Task";
-export const TaskList = ({ tasks }) => {
+import Task from "./Task";
+const TaskList = ({ tasks, onCompletedTask, onDelete, onEdit }) => {
   return (
-    <div>
+    <div className="containerTasklist">
       {tasks.map((task) => (
-        <Task key={task.id} task={task} />
+        <Task
+          key={task.id}
+          task={task}
+          onCompletedTask={onCompletedTask}
+          onDelete={onDelete}
+          onEdit={onEdit}
+        />
       ))}
     </div>
   );
 };
+
+export default TaskList;

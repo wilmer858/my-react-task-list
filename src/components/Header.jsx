@@ -27,13 +27,15 @@ const Header = ({ addTask }) => {
   };
 
   return (
-    <div>
+    <div className="Header">
       <h2>Todo App</h2>
       <form className="form" onSubmit={handleSubmit}>
         <label className="form1">
           <input
+            className="formInputAdd"
             type="text"
             name="name"
+            autoComplete="activar"
             placeholder="Name"
             value={newTask.name}
             onChange={handleInputChange}
@@ -41,6 +43,7 @@ const Header = ({ addTask }) => {
         </label>
         <label className="form2">
           <input
+            className="formInputAdd"
             type="text"
             name="description"
             placeholder="Description"
