@@ -18,18 +18,19 @@ body {
 }
 
 .containerTasklist {
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 30px;
   font-size: 23px;
 }
 
 .Header {
-  font-size: 23px;
+  font-size: 28px;
 }
 
 .form {
   display: grid;
   grid-template-columns: 35% 55% 10%;
+  padding-bottom: 5px;
 }
 
 .form1,
@@ -51,18 +52,27 @@ button {
   border: solid 1px gray;
   border-radius: 5px;
   background-color: aquamarine;
-  font-size: 28px;
+  font-size: 35px;
+}
+
+.textError {
+  color: red;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+
+
 }
 
 .task {
-  height: 55px;
   display: grid;
-  grid-template-columns: 5% 25% 59% 5% 6%;
+  grid-template-columns: 6% 28% 55% 5% 6%;
   align-items: center;
   background-color: azure;
   border: solid 1px cadetblue;
   border-radius: 5px;
   margin-bottom: 5px;
+  font-size: 28px;
 }
 
 .completed {
@@ -75,7 +85,7 @@ button {
 }
 
 .span2 {
-  padding-left: 20px;
+  padding-left: 15px;
 }
 
 .edit {
@@ -85,6 +95,7 @@ button {
   color: blue;
   border: azure;
   background-color: azure;
+  font-size: 30px;
 }
 
 .delete {
@@ -93,6 +104,7 @@ button {
   color: red;
   border: azure;
   background-color: azure;
+  font-size: 30px;
 }
 
 .formInput {

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Header = ({ addTask }) => {
+  const [error, setError] = useState("");
   const [newTask, setNewTask] = useState({
     id: Date.now(),
     name: "",
@@ -15,7 +16,13 @@ const Header = ({ addTask }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (newTask.name.trim() !== "") {
+
+    if (newTask.name.trim().length <= 3) {
+      setError("The task name must be more than three characters.");
+    } else if (newTask.name.trim().length > 70) {
+      setError("The task name cannot be that long.");
+    } else {
+      setError("");
       addTask(newTask);
       setNewTask({
         id: Date.now(),
@@ -36,7 +43,7 @@ const Header = ({ addTask }) => {
             type="text"
             name="name"
             autoComplete="activar"
-            placeholder="Name"
+            placeholder="Name Task"
             value={newTask.name}
             onChange={handleInputChange}
           />
@@ -55,6 +62,7 @@ const Header = ({ addTask }) => {
           +
         </button>
       </form>
+      {error && <p className="textError">{error}</p>}
     </div>
   );
 };
