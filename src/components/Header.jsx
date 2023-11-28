@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { Box } from "@chakra-ui/react";
+import React, { useState } from "react";
 
 const Header = ({ addTask }) => {
   const [error, setError] = useState("");
@@ -58,9 +59,20 @@ const Header = ({ addTask }) => {
             onChange={handleInputChange}
           />
         </label>
-        <button className="button" type="submit">
+        <Box
+          as="button"
+          color="white"
+          fontWeight="bold"
+          borderRadius="md"
+          fontSize="35px"
+          bgGradient="radial(circle at 6.6% 12%, rgb(64, 0, 126) 20.8%, rgb(0, 255, 160) 100.2%)"
+          _hover={{
+            bgGradient: "linear(to-r, #434343 0%, black 100%)",
+          }}
+          type="submit"
+        >
           +
-        </button>
+        </Box>
       </form>
       {error && <p className="textError">{error}</p>}
     </div>

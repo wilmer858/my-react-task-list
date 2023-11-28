@@ -1,17 +1,12 @@
 body {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   margin: 0;
   font-family: sans-serif;
 }
 
 .Container {
-  background-color: beige;
-  width: 700px;
-  border: solid 1px black;
+  width: 750px;
+  border: solid 3px cadetblue;
   border-radius: 10px;
   padding-left: 8px;
   padding-right: 8px;
@@ -24,12 +19,13 @@ body {
 }
 
 .Header {
-  font-size: 28px;
+  font-size: 45px;
 }
 
 .form {
   display: grid;
   grid-template-columns: 35% 55% 10%;
+  padding-top: 30px;
   padding-bottom: 5px;
 }
 
@@ -48,11 +44,8 @@ body {
 }
 
 button {
-  height: 55px;
   border: solid 1px gray;
   border-radius: 5px;
-  background-color: aquamarine;
-  font-size: 35px;
 }
 
 .textError {
@@ -60,15 +53,12 @@ button {
   font-size: 16px;
   margin: 0;
   padding: 0;
-
-
 }
 
 .task {
   display: grid;
   grid-template-columns: 6% 28% 55% 5% 6%;
   align-items: center;
-  background-color: azure;
   border: solid 1px cadetblue;
   border-radius: 5px;
   margin-bottom: 5px;
@@ -92,18 +82,14 @@ button {
   grid-column: 4;
   line-height: 50%;
   justify-self: center;
-  color: blue;
   border: azure;
-  background-color: azure;
   font-size: 30px;
 }
 
 .delete {
   grid-column: 5;
   line-height: 50%;
-  color: red;
   border: azure;
-  background-color: azure;
   font-size: 30px;
 }
 
@@ -113,7 +99,6 @@ button {
   align-items: center;
   border: solid 1px cadetblue;
   border-radius: 8px;
-  background-color: azure;
   margin-bottom: 5px;
 }
 
@@ -121,7 +106,7 @@ button {
   display: grid;
   grid-template-columns: 100%;
   border-radius: 8px;
-  font-size: 23px;
+  font-size: 25px;
   padding-left: 5px;
 }
 
@@ -129,14 +114,32 @@ button {
   height: 35px;
   border: solid 1px;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 25px;
   padding-left: 5px;
 }
 
 .editSave {
   line-height: 50%;
   justify-self: center;
-  color: blue;
   border: azure;
-  background-color: azure;
+  font-size: 25px;
+}
+
+.Menu {
+  display: flex;
+  align-items: flex-start;
+}
+
+.menu-links>a {
+  text-decoration: none;
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+.menu-links>a:not(:last-child)::after {
+  content: "|";
+  margin-left: 8px;
+  margin-right: 0;
+  color: cadetblue;
+
 }

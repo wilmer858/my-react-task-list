@@ -1,5 +1,6 @@
 import { BiTrash, BiEdit, BiSave } from "react-icons/bi";
 import React, { useState } from "react";
+import { IconButton } from "@chakra-ui/react";
 
 const Task = ({ task, onCompletedTask, onDelete, onEdit }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -18,7 +19,8 @@ const Task = ({ task, onCompletedTask, onDelete, onEdit }) => {
     setIsEditing(true);
   };
 
-  const handleSaveEdit = () => {
+  const handleSaveEdit = (e) => {
+    e.preventDefault();
     onEdit(task.id, editedTitle, editedDescription);
     setIsEditing(false);
   };
@@ -27,27 +29,35 @@ const Task = ({ task, onCompletedTask, onDelete, onEdit }) => {
     <div className="containerTask">
       {isEditing ? (
         <form className="formInput" onSubmit={handleSaveEdit}>
-          <label className="inputEdit" htmlFor="name">
+          <label className="inputEdit">
             <input
               className="editInput"
               name="name"
+              autoComplete="active"
               type="text"
               value={editedTitle}
               onChange={(e) => setEditedTitle(e.target.value)}
             />
           </label>
-          <label className="inputEdit" htmlFor="name">
+          <label className="inputEdit">
             <input
               className="editInput"
               name="name"
+              autoComplete="active"
               type="text"
               value={editedDescription}
               onChange={(e) => setEditedDescription(e.target.value)}
             />
           </label>
-          <button className="editSave" type="submit">
+          <IconButton
+            fontSize={25}
+            color={"-moz-initial"}
+            bg={"none"}
+            className="editSave"
+            type="submit"
+          >
             <BiSave />
-          </button>
+          </IconButton>
         </form>
       ) : (
         <div className={`task ${task.completed ? "completed" : ""}`}>
@@ -62,12 +72,24 @@ const Task = ({ task, onCompletedTask, onDelete, onEdit }) => {
           <span className="span1">{task.name}</span>
           <span className="span2">{task.description}</span>
 
-          <button className="edit" onClick={handleEdit}>
+          <IconButton
+            fontSize={25}
+            color={"-moz-initial"}
+            bg={"none"}
+            className="edit"
+            onClick={handleEdit}
+          >
             <BiEdit />
-          </button>
-          <button className="delete" onClick={handleDelete}>
+          </IconButton>
+          <IconButton
+            fontSize={25}
+            color={"-moz-initial"}
+            bg={"none"}
+            className="delete"
+            onClick={handleDelete}
+          >
             <BiTrash />
-          </button>
+          </IconButton>
         </div>
       )}
     </div>
